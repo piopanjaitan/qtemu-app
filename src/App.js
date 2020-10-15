@@ -5,6 +5,7 @@ import './App.css';
 
 import {ButtonAppBar} from './component/ButtonAppBar'
 import {ComplexGrid} from './component/ComplexGrid'
+import FetchData from './component/FetchData'
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
       <div>
       <ButtonAppBar/>
       <ComplexGrid/>
+      <FetchData/>
       </div>
     )
 
