@@ -26,6 +26,8 @@ export default class FetchData extends Component {
         <ul>
             {this.state.people.map(p => <li>{p.name}</li>)}
         </ul>
+
+        
         </div>
         );
     }
