@@ -9,7 +9,13 @@ export default class FetchData extends Component {
         };
     }
     componentDidMount() {
-        axios.get("https://swaapi.dev/api/people/1/").then(response => this.setState({ people:response.data}));
+        axios.get("https://swaapi.dev/api/people/1/")
+        
+        .then(response => this
+            
+            .setState({ people:response.data})
+            
+            );
     }
 
     render() {
