@@ -68,9 +68,11 @@ const useStyles = makeStyles((theme) => ({
 
   //Past Meetups
   paperPastMettups: {
-    padding: theme.spacing(2),
     backgroundColor: 'gray',
     marginTop: theme.spacing(1),
+    maxWidth: 400,
+    margin: `${theme.spacing(1)}px auto`,
+    padding: theme.spacing(0, 3),
   },
 }));
 
@@ -89,22 +91,26 @@ export function ComplexGrid() {
             </ButtonBase>
           </Grid>
           
-              <Grid item xs >
+              <Grid item xs = {2} >
               <Box fontWeight="fontWeightBold" m={2}>
                     Hacktiv8 Meetup
                   </Box>
                   <Box m={2}>
-                    Location : Jakarta, Indonesia
+                    Location    Jakarta, Indonesia
                   </Box>
                   <Box m={2}>
-                    Members : 1,078
+                    Members    1,078
                   </Box>
                   <Box m={2}>
-                    Organizers : Adhy Wiranata
+                    Organizers   Adhy Wiranata
                   </Box>
                   <Box m={2}>
                     <Button variant="contained" color="primary">Login</Button>
                   </Box>
+              </Grid>
+              <Grid item xs={2} spacing={-2}>
+                <Box m={2}>
+                </Box>
               </Grid>
             
         </Grid>
@@ -185,7 +191,7 @@ export function ComplexGrid() {
                     <b>Organizer</b>
                   </Box>
                   <Box m={1}>
-                    Organizers : Adhy Wiranata
+                    Adhy Wiranata
                   </Box>
                 </Typography> 
               </Grid>
