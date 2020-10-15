@@ -5,8 +5,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 In the project directory, you can run:
 
 Published deploy 
-Branch : - main ==>  https://5f87ca80ab244d57e2bf359e--optimistic-heisenberg-2421c0.netlify.app/ 
-       : - fetch_data ==> https://fervent-euclid-725fdf.netlify.app/
+ - main ==>  https://5f87ca80ab244d57e2bf359e--optimistic-heisenberg-2421c0.netlify.app/ 
+ 
+ - fetch_data ==> https://fervent-euclid-725fdf.netlify.app/
 
 ### `npm start`
 
