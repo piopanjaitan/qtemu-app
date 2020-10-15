@@ -4,9 +4,7 @@ import './App.css';
 
 
 import {ButtonAppBar} from './component/ButtonAppBar'
-// import {MediaCard} from './component/MediaCard'
 import {ComplexGrid} from './component/ComplexGrid'
-import {SpacingGrid} from './component/SpacingGrid'
 
 class App extends Component {
   render() {
@@ -14,7 +12,6 @@ class App extends Component {
       <div>
       <ButtonAppBar/>
       <ComplexGrid/>
-      <SpacingGrid/>
       </div>
     )
 

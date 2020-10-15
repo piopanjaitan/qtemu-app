@@ -4,99 +4,75 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
-import { CenterFocusStrong } from '@material-ui/icons';
 import Box from '@material-ui/core/Box';
+import { CenterFocusStrong } from '@material-ui/icons';
+
+import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 import Avatar from '@material-ui/core/Avatar';
 import Divider from '@material-ui/core/Divider';
-
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    marginTop: theme.spacing(1),
-    marginBottom: theme.spacing(1),
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
   },
-
-  //haktiv8 meetup
-  paperMeetup: {
-    alignItems: CenterFocusStrong,
-    padding: theme.spacing(2),
-    backgroundColor: 'gray',
-    marginTop: theme.spacing(2),
+  menuButton: {
+    marginRight: theme.spacing(2),
   },
-  imageMeetup: {
-    width: theme.spacing(28),
-    height: theme.spacing(28),
-  },
-  imgMeetup: {
-    margin: 'auto',
-    display: 'block',
-    maxWidth: '100%',
-    maxHeight: '100%',
-  },
-
-  rootNextMeetup: {
+  title: {
     flexGrow: 1,
-    marginTop: theme.spacing(1),
   },
-
-  //Next Mettup
-  paperNextMeetup: {
+  titles: {
+    padding: theme.spacing(3),
+    flexGrow: 5,
+  },
+  titless: {
+    flexGrow: 500,
+  },
+  paper: {
     padding: theme.spacing(2),
-    backgroundColor: 'gray',
-    marginTop: theme.spacing(1),
+    color: theme.palette.text.secondary,
   },
-
-  //About Mettup
-  paperAboutMeetup: {
-    padding: theme.spacing(5),
-    marginRight: 100,
-    marginLeft: 100,
-    height: 300,
-    backgroundColor: 'white',
-    marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(7),
-  },
-
-  //Members
-  paperMembers: {
-    padding: theme.spacing(2),
-    backgroundColor: 'gray',
-    marginTop: theme.spacing(1),
-  },
-  imgMembers: {
+  small: {
     width: theme.spacing(7),
     height: theme.spacing(7),
   },
-
-  //Past Meetups
-  paperPastMettups: {
-    padding: theme.spacing(2),
-    backgroundColor: 'gray',
-    marginTop: theme.spacing(1),
+  large: {
+    width: theme.spacing(28),
+    height: theme.spacing(28),
   },
 }));
 
-export function ComplexGrid() {
+export default function ButtonAppBar() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-       <Grid justify="center" container spacing={3}>
-        <Grid item xs={11}>
-      <Paper className={classes.paperMeetup}>
-        <Grid container wrap="nowrap" spacing={2}>
-          <Grid item>
-            <ButtonBase className={classes.imageMeetup}>
-            <Avatar src="/src/image/img_avatar_suit.png" className={classes.imageMeetup} variant="square"></Avatar>
-            </ButtonBase>
-          </Grid>
+      <AppBar position="static">
+        <Toolbar>
           
-              <Grid item xs >
-              <Box fontWeight="fontWeightBold" m={2}>
+          <Typography variant="h6" className={classes.title}>
+            QTemu
+          </Typography>
+            <Grid justify="flex-start" container>
+              <Button color="inherit">Create Meetup</Button>
+              <Button color="inherit">Explore</Button>
+            </Grid>
+          <Button color="inherit">Login</Button>
+        </Toolbar>
+      </AppBar><br></br>
+      <Grid justify="center" container spacing={3}>
+        <Grid item xs={11}>
+          <Paper className={classes.paper}>
+            <Grid container wrap="nowrap" spacing={2}>
+              <Grid item>
+                <Avatar src="/static/images/avatar/1.jpg" className={classes.large} variant="square"></Avatar>
+              </Grid>
+              <Grid item xs>
+                <Typography fontWeight="fontWeightBold">
+                  <Box fontWeight="fontWeightBold" m={2}>
                     Hacktiv8 Meetup
                   </Box>
                   <Box m={2}>
@@ -111,27 +87,25 @@ export function ComplexGrid() {
                   <Box m={2}>
                     <Button variant="contained" color="primary">Login</Button>
                   </Box>
+                </Typography> 
               </Grid>
-            
+            </Grid>
+          </Paper>
         </Grid>
-      </Paper>
       </Grid>
-      </Grid>
-
       <Grid justify="center" container spacing={3}>
         <Grid item xs={11}>
           <Box fontWeight="fontWeightBold" m={1}>
-            <h2>Next Meetup</h2>
+            Next Meetup
           </Box>
         </Grid>
       </Grid>      
-
       <Grid justify="center" container spacing={3}>
         <Grid item xs={10}>
-          <Paper className={classes.paperNextMeetup}>
-        <Box m={1}>
-             <p><b>Awesome meetup and event</b><br></br></p>
-              <p>25 January 2019</p>
+          <Paper className={classes.paper}>
+            <Box m={1}>
+              Awesome meetup and event<br></br>
+              25 January 2019
             </Box>
             <Box m={1}>
               Hello, JavaScript & Node.js Ninjas!
@@ -140,55 +114,46 @@ export function ComplexGrid() {
               If you have a short announcement you'd like to share with the audience, yoou may do so during open mic announcements.
             </Box>
             <Box m={1}>
-              <p>Remember to bring a photo ID to get through building security.</p>
+              Remember to bring a photo ID to get through building security.
             </Box>
             <Box m={1}>
-              <p>-------</p>
+              -----
             </Box>
             <Box m={1}>
-              <p>See you there!</p>
+              See you there!
             </Box>
             <Box m={1}>
-              <p>Best, Hengki, Govanni, Sofian, Riza, Agung The JakartaJS Organizers</p>
+              Best, Hengki, Govanni, Sofian, Riza, Agung The JakartaJS Organizers
             </Box>
-      </Paper>
+          </Paper>
+        </Grid>
       </Grid>
-      </Grid>
-
       <Grid justify="center" container spacing={3}>
         <Grid item xs={11}>
           <Box fontWeight="fontWeightBold" m={1}>
-            <h2>About Meetup</h2>
+            About Meetup
           </Box>
         </Grid>
-      </Grid>
-
-      <Grid justify="center" container spacing={2}>
+      </Grid>      
+      <Grid justify="center" container spacing={3}>
         <Grid item xs={10}>
-          <p>Come and meet other developers interested in the JavaScript and it's library in the Greater Jakarta area.</p>
-          <p>Twitter : @JakartaJS and we use the hashtag #jakartajs</p>
+          Come and meet other developers interested in the JavaScript and it's library in the Greater Jakarta area.<br></br>
+          Twitter : @JakartaJS and we use the hashtag #jakartajs
         </Grid>
       </Grid>
-
       <Grid justify="center" container spacing={3}>
         <Grid item xs={11}>
           <Box fontWeight="fontWeightBold" m={1}>
-            <h2>Members</h2>
+            Members
           </Box>
-        </Grid>
-      </Grid>
-
-      <Grid justify="center" container spacing={3}>
-        <Grid item xs={10}>
-      <Paper className={classes.paperMembers}>
-      <Grid container wrap="nowrap" spacing={2}>
+          <Grid container wrap="nowrap" spacing={2}>
               <Grid item>
-                <Avatar src="/src/image/img_avatar_suit.png" className={classes.imgMembers}></Avatar>
+                <Avatar src="/static/images/avatar/1.jpg" className={classes.small}></Avatar>
               </Grid>
               <Grid item xs={2}>
                 <Typography fontWeight="fontWeightBold">
                   <Box m={1}>
-                    <b>Organizer</b>
+                    Organizer
                   </Box>
                   <Box m={1}>
                     Organizers : Adhy Wiranata
@@ -201,33 +166,56 @@ export function ComplexGrid() {
                 </Box>
               </Grid>
             </Grid>
-      </Paper>
+        </Grid>
+      </Grid> 
+      <Grid justify="center" container spacing={3}>
+        <Grid item xs={10}>
+          <Paper className={classes.paper}>
+            <Grid container wrap="nowrap" spacing={2}>
+              <Grid item>
+                <Avatar src="/static/images/avatar/1.jpg" className={classes.small}></Avatar>
+              </Grid>
+              <Grid item xs={2}>
+                <Typography fontWeight="fontWeightBold">
+                  <Box m={1}>
+                    Organizer
+                  </Box>
+                  <Box m={1}>
+                    Organizers : Adhy Wiranata
+                  </Box>
+                </Typography> 
+              </Grid>
+              <Grid item xs={2}>
+                <Box m={5}>
+                  4 others.
+                </Box>
+              </Grid>
+            </Grid>
+          </Paper>
+        </Grid>
       </Grid>
-      </Grid>
-
       <Grid justify="center" container spacing={3}>
         <Grid item xs={11}>
           <Box fontWeight="fontWeightBold" m={1}>
-            <h2>Past Meetups</h2>
+            Past Meetups
           </Box>
         </Grid>
       </Grid> 
-
       <Grid justify="center" container spacing={3}>
         <Grid item xs={3}>
-          <Paper className={classes.paperPastMettups}>
+          <Paper className={classes.paper}>
             <Grid container wrap="nowrap" spacing={2}>
                 <Typography fontWeight="fontWeightBold">
                   <Box m={2}>
-                    <b>27 November 2017</b>
+                    27 November 2017
                   </Box>
                   <Divider className={classes.divider} />
                   <Box m={2}>
-                    <b>38 JakartaJS April Meetup with</b><br></br>
-                    <b>Blibli</b>
+                    38 JakartaJS April Meetup with<br></br>
+                    Blibli
                   </Box>
                   <Box m={2}>
-                    <b>113</b> went
+                    113 went
                   </Box>
                   <Box m={2}>
                     <Button variant="contained" color="primary">View</Button>
@@ -237,19 +225,19 @@ export function ComplexGrid() {
           </Paper>
         </Grid>
         <Grid item xs={3}>
-          <Paper className={classes.paperPastMettups}>
+          <Paper className={classes.paper}>
             <Grid container wrap="nowrap" spacing={2}>
                 <Typography fontWeight="fontWeightBold">
                   <Box m={2}>
-                    <b>27 October 2017</b>
+                    27 October 2017
                   </Box>
                   <Divider className={classes.divider} />
                   <Box m={2}>
-                    <b>37 JakartaJS April Meetup with</b><br></br>
-                    <b>Hacktiv8</b>
+                    37 JakartaJS April Meetup with<br></br>
+                    Hacktiv8
                   </Box>
                   <Box m={2}>
-                    <b>110</b> went
+                    110 went
                   </Box>
                   <Box m={2}>
                     <Button variant="contained" color="primary">View</Button>
@@ -259,19 +247,19 @@ export function ComplexGrid() {
           </Paper>
         </Grid>
         <Grid item xs={3}>
-          <Paper className={classes.paperPastMettups}>
+          <Paper className={classes.paper}>
             <Grid container wrap="nowrap" spacing={2}>
                 <Typography fontWeight="fontWeightBold">
                   <Box m={2}>
-                    <b>27 September 2017</b>
+                    27 September 2017
                   </Box>
                   <Divider className={classes.divider} />
                   <Box m={2}>
-                    <b>39 JakartaJS April Meetup with</b> <br></br>
-                    <b>kumparan</b>
+                    39 JakartaJS April Meetup with<br></br>
+                    kumparan
                   </Box>
                   <Box m={2}>
-                    <b>139</b> went
+                    139 went
                   </Box>
                   <Box m={2}>
                     <Button variant="contained" color="primary">View</Button>
