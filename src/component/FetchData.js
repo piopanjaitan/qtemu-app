@@ -13,8 +13,7 @@ export default class FetchData extends Component {
         this.setState({
             people: response.data.results
         })
-            
-    })
+            })
     }
 
     render() {
@@ -24,7 +23,9 @@ export default class FetchData extends Component {
             <h1> Fetching data....</h1>
             
         <ul>
+            
             {this.state.people.map(p => <li>{p.name}</li>)}
+
         </ul>
 
         

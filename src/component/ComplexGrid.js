@@ -31,12 +31,6 @@ const useStyles = makeStyles((theme) => ({
     width: theme.spacing(28),
     height: theme.spacing(28),
   },
-  imgMeetup: {
-    margin: 'auto',
-    display: 'block',
-    maxWidth: '100%',
-    maxHeight: '100%',
-  },
 
   rootNextMeetup: {
     flexGrow: 1,
@@ -291,7 +285,7 @@ export function ComplexGrid() {
       <Grid justify="center" container spacing={3}>
         <Typography fontWeight="fontWeightBold">
           <Box m={2}>
-            Copyright Hacktiv8 2018
+            <b>Copyright Hacktiv8 2018</b>
           </Box>
         </Typography> 
       </Grid>       
