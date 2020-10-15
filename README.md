@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+Published deploy : https://5f87ca80ab244d57e2bf359e--optimistic-heisenberg-2421c0.netlify.app/ 
+
 ### `npm start`
 
 Runs the app in the development mode.<br />
