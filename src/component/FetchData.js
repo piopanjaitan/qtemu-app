@@ -9,13 +9,12 @@ export default class FetchData extends Component {
         };
     }
     componentDidMount() {
-        axios.get("https://swaapi.dev/api/people/1/")
-        
-        .then(response => this
+        axios.get("https://swapi.dev/api/people/").then(response => {
+        this.setState({
+            people: response.data.results
+        })
             
-            .setState({ people:response.data})
-            
-            );
+    })
     }
 
     render() {
@@ -24,7 +23,8 @@ export default class FetchData extends Component {
         <div>
             <h1> Fetching data....</h1>
             
-        <ul>{this.state.people.map(p => <li>{p.name}</li>)}
+        <ul>
+            {this.state.people.map(p => <li>{p.name}</li>)}
         </ul>
         </div>
         );
